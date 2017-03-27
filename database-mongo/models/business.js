@@ -76,5 +76,11 @@ addBiz('Mike Liao', 4083182027);
 // addBiz("Tayo Jolaosho", 9177553154);
 // addBiz("Eugene", 9177503172);
 // addBiz("Whitney Zhu", 4152157254);
+// addBiz("Dale Toney", 3179410941);
+// addBiz("Andrew Alonis", 6502699460);
+// addBiz("Jason Chambers", 2248305098);
+// addBiz("JJ Gutierrez", 7135019499);
+
+
 
 module.exports = Business;
