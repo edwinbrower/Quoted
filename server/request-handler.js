@@ -140,7 +140,10 @@ exports.textBusinesses = function(req, res) {
 
 exports.callBusinesses = function(req, res) {
   console.log('trying to call'); 
-  Business.find({businessType: "test"}, function(err, businesses){
+  var businessType = req.body.businessCategory;
+  var location = req.body.location;
+
+  Business.find({businessType: businessType, businessCity: location}, function(err, businesses){
     if (err) {
       console.log(err);
     } else {
@@ -177,8 +180,8 @@ exports.setVoiceMessage = function(req, res) {
   var voiceRecording = 'https://s3-us-west-1.amazonaws.com/hrsf72-quoted-app/DemoAudioRecording.wav' // manually converted using internet from webm to wav
   // var user = req.body.user;
   var user = {
-    name: "edwin brower",
-    userCellPhone: 7703357571
+    name: "Greenfield Bros",
+    userCellPhone: 1234567890
   }
 
   var twiml = new twilio.TwimlResponse();
